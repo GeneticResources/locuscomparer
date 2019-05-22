@@ -125,7 +125,7 @@ retrieve_LD = function(chr,snp,population){
 #' @export
 get_lead_snp = function(merged, snp = NULL){
     if (is.null(snp)) {
-        snp = merged[which.min(merged$pval1 + merged$pval2), 'rsid']
+        snp = merged[which.min(merged$pval1), 'rsid']
     }
     else {
         if (!snp %in% merged$rsid) {
